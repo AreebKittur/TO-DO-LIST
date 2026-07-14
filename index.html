@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+  
+  <title>Advanced To-Do App</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <header class="header">
+    <h1><i class="fa-solid fa-list-check"></i> Advanced To-Do</h1>
+
+    <button id="themeBtn" class="theme-btn">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </header>
+
+  <section class="stats">
+
+    <div class="card">
+      <h2 id="totalTasks">0</h2>
+      <p>Total Tasks</p>
+    </div>
+
+    <div class="card">
+      <h2 id="completedTasks">0</h2>
+      <p>Completed</p>
+    </div>
+
+    <div class="card">
+      <h2 id="pendingTasks">0</h2>
+      <p>Pending</p>
+    </div>
+
+  </section>
+
+  <section class="progress-section">
+
+    <div class="progress-info">
+      <span>Progress</span>
+      <span id="progressPercent">0%</span>
+    </div>
+
+    <div class="progress-bar">
+      <div id="progressFill"></div>
+    </div>
+
+  </section>
+
+  <section class="task-form">
+
+    <input
+      type="text"
+      id="taskInput"
+      placeholder="Task title">
+
+    <select id="priority">
+
+      <option value="High">High Priority</option>
+      <option value="Medium" selected>Medium Priority</option>
+      <option value="Low">Low Priority</option>
+
+    </select>
+
+    <select id="category">
+
+      <option>Study</option>
+      <option>Work</option>
+      <option>Personal</option>
+      <option>Shopping</option>
+      <option>Fitness</option>
+
+    </select>
+
+    <input type="date" id="dueDate">
+
+    <button id="addTask">
+      <i class="fa-solid fa-plus"></i>
+      Add
+    </button>
+
+  </section>
+
+  <section class="toolbar">
+
+    <input
+      type="text"
+      id="search"
+      placeholder="Search task...">
+
+    <select id="filter">
+
+      <option value="all">All</option>
+      <option value="active">Active</option>
+      <option value="completed">Completed</option>
+
+    </select>
+
+    <button id="exportBtn">
+      Export
+    </button>
+
+    <label class="import-btn">
+      Import
+      <input
+        type="file"
+        id="importFile"
+        hidden
+        accept=".json">
+    </label>
+
+  </section>
+
+  <ul id="taskList"></ul>
+
+</div>
+
+<div id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
